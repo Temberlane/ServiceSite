@@ -2,9 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import Services from './pages/Services'
-import About from './pages/About'
-import Contact from './pages/Contact'
+import Booking from './pages/Booking'
+import Confirmation from './pages/Confirmation'
 
 export default function App() {
   return (
@@ -14,9 +13,8 @@ export default function App() {
         <main className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/confirmation" element={<Confirmation />} />
           </Routes>
         </main>
         <Footer />

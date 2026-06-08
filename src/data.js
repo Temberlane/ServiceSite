@@ -1,0 +1,31 @@
+export const ICONS = {
+  tooth: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9.2 2 6.5 3.8 6.5 6.8c0 1.9.5 3.4 1 4.9L8.8 18c.2.9.9 1.5 1.7 1.5.9 0 1.6-.6 1.8-1.5l.2-1.8c.1-.7.7-1.2 1.5-1.2s1.4.5 1.5 1.2l.2 1.8c.2.9.9 1.5 1.8 1.5.8 0 1.5-.6 1.7-1.5l1.3-6.3c.5-1.5 1-3 1-4.9C17.5 3.8 14.8 2 12 2z"/></svg>',
+  'tooth-implant': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9.2 2 6.5 3.8 6.5 6.8c0 1.9.5 3.4 1 4.9L8.8 16c.2.9.9 1.5 1.7 1.5.9 0 1.6-.6 1.8-1.5l.2-1.5c.1-.7.7-1.2 1.5-1.2s1.4.5 1.5 1.2l.2 1.5c.2.9.9 1.5 1.8 1.5.8 0 1.5-.6 1.7-1.5l1.3-4.3c.5-1.5 1-3 1-4.9C17.5 3.8 14.8 2 12 2z"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="10" y1="20" x2="14" y2="20"/></svg>',
+  'shield-check': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
+  'user-plus': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>',
+  sparkles: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9.94 14.66A1 1 0 0 1 9 14l-.94-2.06a1 1 0 0 0-.5-.5L5.5 10.5a1 1 0 0 1 0-1.84l2.06-.94a1 1 0 0 0 .5-.5L9 5.16a1 1 0 0 1 1.84 0l.94 2.06a1 1 0 0 0 .5.5l2.06.94a1 1 0 0 1 0 1.84l-2.06.94a1 1 0 0 0-.5.5L10.84 14a1 1 0 0 1-.9.66Z"/><path d="M18 5h.01M19 11h.01M5 19h.01"/></svg>',
+  crown: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M11.6 3.5a.6.6 0 0 1 .8 0l3 2.6a.6.6 0 0 0 .8 0l3.4-3a.6.6 0 0 1 1 .5L21 18a1 1 0 0 1-1 .9H4a1 1 0 0 1-1-.9L1.4 3.6a.6.6 0 0 1 1-.5l3.4 3a.6.6 0 0 0 .8 0Z"/><path d="M5 21h14"/></svg>',
+  phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13.83 19.9A14 14 0 0 1 4.1 10.17 2 2 0 0 1 5.6 7.78l1.74-.35a1.5 1.5 0 0 1 1.7.92l.7 1.78a1.5 1.5 0 0 1-.42 1.7l-.86.74a12 12 0 0 0 4.04 4.04l.74-.86a1.5 1.5 0 0 1 1.7-.42l1.78.7a1.5 1.5 0 0 1 .92 1.7l-.35 1.74a2 2 0 0 1-2.39 1.5Z"/></svg>',
+  star: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2.5l2.7 5.7 6.1.85-4.45 4.25 1.1 6.2L12 16.9l-5.45 2.6 1.1-6.2L3.2 9.05l6.1-.85Z"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>',
+  calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>',
+  arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+};
+
+export const SERVICES = [
+  { id: 'checkup', name: 'Checkup & Clean', sub: 'Preventive care', price: '$120', note: '', desc: 'Your standard twice-a-year visit. We check everything, clean it up, and let you know if anything needs attention.', duration: '45 min', icon: 'tooth' },
+  { id: 'gum', name: 'Gum Treatment & Deep Clean', sub: 'Gum care', price: '$180–$240', note: 'depending on severity', desc: 'If your gums are sore, bleeding, or puffy, this is the one. We go deeper than a regular clean to get things back on track.', duration: '90 min', icon: 'shield-check' },
+  { id: 'consult', name: 'New Patient Consult', sub: 'First visit', price: '$60', note: 'goes toward your treatment', desc: 'Come in, meet Dr. Teeth, and talk through what you need. No pressure, no hard sell — just a good look at where things are at.', duration: '30 min', icon: 'user-plus' },
+  { id: 'whitening', name: 'Teeth Whitening', sub: 'Cosmetic', price: '$350', note: '', desc: 'One appointment and you leave noticeably brighter. Done in-chair, no trays to take home, no waiting around.', duration: '60 min', icon: 'sparkles' },
+  { id: 'crown', name: 'Crown or Bridge', sub: 'Restorative', price: '$1,200', note: '', desc: 'For teeth that are too far gone for a filling. We fit a custom crown or bridge that looks and feels like the real thing.', duration: '2 hrs', icon: 'crown' },
+  { id: 'implant', name: 'Dental Implant', sub: 'Permanent solution', price: '$3,000', note: '', desc: "Missing a tooth? An implant is the closest thing to growing it back. It's fixed in, looks natural, and lasts decades.", duration: '3 hrs', icon: 'tooth-implant' },
+];
+
+export const REVIEWS = [
+  { who: 'Michael T.', avatar: '/images/profiles/profile_1.jpg', text: "I'd been putting off the dentist for years but Dr. Teeth made it genuinely easy. Told me exactly what was going on and what it'd cost before touching anything. Already booked my next one." },
+  { who: 'Lisa R.', avatar: '/images/profiles/profile_2.jpg', text: "Been coming here since 2016 and I've never once felt rushed or talked into something I didn't need. My teeth have honestly never been better." },
+  { who: 'David K.', avatar: '/images/profiles/profile_3.jpg', text: "Had some gum issues for a while and other dentists just gave me a pamphlet. Dr. Teeth actually sorted it out. Two appointments and the difference was massive." },
+  { who: 'Jennifer M.', avatar: '/images/profiles/profile_4.jpg', text: "Prices are right there on the website, which is rare. Went in for a consult and left with a clear plan and a number I could actually budget for. No nasty surprises at checkout." },
+];

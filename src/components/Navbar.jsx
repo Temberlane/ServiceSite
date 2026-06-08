@@ -1,11 +1,14 @@
-import { NavLink } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
-  return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-      <div className="container">
-        <NavLink className="navbar-brand fw-semibold" to="/">ServiceSite</NavLink>
+  const navigate = useNavigate()
 
+  return (
+    <nav className="navbar navbar-expand-lg site-nav sticky-top py-2">
+      <div className="container wrap">
+        <Link className="navbar-brand wordmark p-0" to="/">
+          Dr. Teeth
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -17,27 +20,28 @@ export default function Navbar() {
         >
           <span className="navbar-toggler-icon" />
         </button>
-
-        <div className="collapse navbar-collapse" id="navMenu">
-          <ul className="navbar-nav ms-auto gap-1">
-            {[
-              { to: '/', label: 'Home' },
-              { to: '/services', label: 'Services' },
-              { to: '/about', label: 'About' },
-              { to: '/contact', label: 'Contact' },
-            ].map(({ to, label }) => (
-              <li className="nav-item" key={to}>
-                <NavLink
-                  className={({ isActive }) =>
-                    `nav-link${isActive ? ' active' : ''}`
+        <div className="collapse navbar-collapse justify-content-end" id="navMenu">
+          <ul className="navbar-nav align-items-lg-center gap-lg-1 mt-3 mt-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/#services">Services &amp; Pricing</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/#reviews">Patient Reviews</Link>
+            </li>
+            <li className="nav-item ms-lg-2">
+              <Link
+                className="nav-link is-cta"
+                to="/booking"
+                onClick={() => {
+                  const el = document.getElementById('navMenu')
+                  if (el && el.classList.contains('show') && window.bootstrap) {
+                    window.bootstrap.Collapse.getOrCreateInstance(el).hide()
                   }
-                  to={to}
-                  end={to === '/'}
-                >
-                  {label}
-                </NavLink>
-              </li>
-            ))}
+                }}
+              >
+                Book Appointment
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
