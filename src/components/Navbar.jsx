@@ -1,8 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
-  const navigate = useNavigate()
-
   return (
     <nav className="navbar navbar-expand-lg site-nav sticky-top py-2">
       <div className="container wrap">

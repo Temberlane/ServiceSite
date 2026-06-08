@@ -1,11 +1,22 @@
 import { useLocation, useNavigate, Link } from 'react-router-dom'
 import { useState } from 'react'
-import { ICONS } from '../data'
+import Icon from '../components/Icon'
 
-function Icon({ name, style }) {
-  return (
-    <span style={style} dangerouslySetInnerHTML={{ __html: ICONS[name] }} />
-  )
+function pad(n) { return String(n).padStart(2, '0') }
+
+function fmtDate(iso) {
+  if (!iso) return '—'
+  const [y, m, d] = iso.split('-').map(Number)
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  return `${months[m - 1]} ${d}, ${y}`
+}
+
+function fmtTime(t) {
+  if (!t) return '—'
+  let [h, m] = t.split(':').map(Number)
+  const ap = h >= 12 ? 'PM' : 'AM'
+  h = h % 12 || 12
+  return `${h}:${pad(m)} ${ap}`
 }
 
 export default function Confirmation() {
@@ -39,7 +50,6 @@ export default function Confirmation() {
 
   return (
     <>
-      {/* hero band */}
       <section className="band-cream" style={{ borderRadius: 0, borderLeft: 0, borderRight: 0 }}>
         <div className="container wrap text-center py-5">
           <div className="confirm-badge mb-3">
@@ -54,8 +64,6 @@ export default function Confirmation() {
       </section>
 
       <div className="container wrap py-5" style={{ maxWidth: 760 }}>
-
-        {/* confirmation number */}
         <div className="band band-blue d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
           <div>
             <div className="label-cap mb-1">Confirmation number</div>
@@ -70,7 +78,6 @@ export default function Confirmation() {
           </button>
         </div>
 
-        {/* appointment details */}
         <div className="fnd-card p-4 p-lg-5 mb-4">
           <div className="label-cap mb-4">Appointment details</div>
           <div className="row g-4">
@@ -94,7 +101,6 @@ export default function Confirmation() {
           </div>
         </div>
 
-        {/* patient information */}
         <div className="fnd-card p-4 p-lg-5 mb-4">
           <div className="label-cap mb-4">Patient information</div>
           <div className="row g-4">
@@ -119,7 +125,6 @@ export default function Confirmation() {
           </div>
         </div>
 
-        {/* scheduled for */}
         <div className="band band-amber mb-4">
           <div className="label-cap mb-3">Scheduled for</div>
           <div className="row g-3">
@@ -128,14 +133,14 @@ export default function Confirmation() {
                 <Icon name="calendar" style={{ width: 16, height: 16, display: 'inline-flex' }} />
                 <span className="label-cap" style={{ color: 'rgba(28,61,86,.7)' }}>Date</span>
               </div>
-              <div className="font-serif fw-bold" style={{ fontSize: 20 }}>{date}</div>
+              <div className="font-serif fw-bold" style={{ fontSize: 20 }}>{fmtDate(date)}</div>
             </div>
             <div className="col-4">
               <div className="d-flex align-items-center gap-2 mb-1" style={{ opacity: .7 }}>
                 <Icon name="clock" style={{ width: 16, height: 16, display: 'inline-flex' }} />
                 <span className="label-cap" style={{ color: 'rgba(28,61,86,.7)' }}>Time</span>
               </div>
-              <div className="font-serif fw-bold" style={{ fontSize: 20 }}>{time}</div>
+              <div className="font-serif fw-bold" style={{ fontSize: 20 }}>{fmtTime(time)}</div>
             </div>
             <div className="col-4">
               <div className="d-flex align-items-center gap-2 mb-1" style={{ opacity: .7 }}>
@@ -147,7 +152,6 @@ export default function Confirmation() {
           </div>
         </div>
 
-        {/* what to expect */}
         <div className="fnd-card p-4 p-lg-5 mb-4">
           <div className="label-cap mb-3">What to expect</div>
           {[
@@ -166,7 +170,6 @@ export default function Confirmation() {
           ))}
         </div>
 
-        {/* actions */}
         <div className="row g-3">
           <div className="col-sm-6">
             <Link to="/" className="btn btn-blue w-100">← Back to home</Link>

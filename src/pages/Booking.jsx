@@ -1,33 +1,7 @@
 import { useState, useRef } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { SERVICES, ICONS } from '../data'
-
-function Icon({ name, style, className }) {
-  return (
-    <span
-      className={className}
-      style={style}
-      dangerouslySetInnerHTML={{ __html: ICONS[name] }}
-    />
-  )
-}
-
-function pad(n) { return String(n).padStart(2, '0') }
-
-function fmtDate(iso) {
-  if (!iso) return '—'
-  const [y, m, d] = iso.split('-').map(Number)
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-  return `${months[m - 1]} ${d}, ${y}`
-}
-
-function fmtTime(t) {
-  if (!t) return '—'
-  let [h, m] = t.split(':').map(Number)
-  const ap = h >= 12 ? 'PM' : 'AM'
-  h = h % 12 || 12
-  return `${h}:${pad(m)} ${ap}`
-}
+import Icon from '../components/Icon'
 
 export default function Booking() {
   const navigate = useNavigate()
@@ -99,20 +73,17 @@ export default function Booking() {
 
   return (
     <div className="container wrap py-4 py-lg-5">
-      {/* header row */}
       <div className="d-flex justify-content-between align-items-center mb-4 band-cream" style={{ padding: '14px 22px', borderRadius: 10 }}>
         <Link to="/" className="link-back d-inline-flex align-items-center gap-2">← Back to home</Link>
         <span className="step-pill"><span className="on">Step 01</span> / 02</span>
       </div>
 
-      {/* title */}
       <div className="mb-5">
         <div className="eyebrow mb-2"><span className="idx">01 /</span> Pick what you need</div>
         <h1 className="section-title" style={{ fontSize: 'clamp(34px,4.6vw,52px)' }}>Book a Visit</h1>
         <p className="lead-muted mt-2 mb-0">Choose what you're coming in for and we'll take it from there.</p>
       </div>
 
-      {/* service selection */}
       <div className="row g-4 mb-2">
         {SERVICES.map((s) => (
           <div key={s.id} className="col-12 col-md-6 col-lg-4">
@@ -144,7 +115,6 @@ export default function Booking() {
         </div>
       )}
 
-      {/* details form */}
       <div className="fnd-card p-4 p-lg-5 mt-5 position-relative overflow-hidden">
         <div className="sec-num position-absolute" style={{ top: -8, right: 18 }}>02</div>
         <div className="eyebrow mb-4 position-relative"><span className="idx">02 /</span> Enter your details</div>
@@ -205,7 +175,6 @@ export default function Booking() {
         </form>
       </div>
 
-      {/* summary bar */}
       {selected ? (
         <div className="band band-blue d-flex flex-wrap justify-content-between align-items-center gap-3 mt-5">
           <div>
@@ -226,7 +195,6 @@ export default function Booking() {
         </p>
       )}
 
-      {/* what happens next */}
       <div className="mt-5 pt-4">
         <div className="label-cap mb-4">What happens next?</div>
         <div className="row g-4">

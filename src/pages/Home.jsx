@@ -1,16 +1,7 @@
 import { useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { SERVICES, REVIEWS, ICONS } from "../data";
-
-function Icon({ name, style, className }) {
-  return (
-    <span
-      className={className}
-      style={style}
-      dangerouslySetInnerHTML={{ __html: ICONS[name] }}
-    />
-  );
-}
+import Icon from "../components/Icon";
 
 function Stars() {
   return (
@@ -40,7 +31,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero */}
       <section
         className="hero"
         style={{
@@ -141,7 +131,6 @@ export default function Home() {
 
       <hr className="divider wrap container" />
 
-      {/* Services */}
       <section id="services" className="py-5">
         <div className="container wrap py-4">
           <div className="row align-items-end mb-4">
@@ -195,7 +184,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reviews */}
       <section
         id="reviews"
         className="py-5"
@@ -271,7 +259,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Booking CTA */}
       <section className="py-5">
         <div className="container wrap py-4">
           <div className="fnd-card overflow-hidden">

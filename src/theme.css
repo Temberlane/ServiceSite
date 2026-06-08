@@ -29,10 +29,7 @@
   --max-page: 1100px;
   --radius: 12px;
   --radius-sm: 8px;
-}
 
-/* Bootstrap overrides */
-:root {
   --bs-body-bg: var(--cream);
   --bs-body-color: var(--ink);
   --bs-body-font-family: var(--serif);
